@@ -80,8 +80,8 @@ A web-based AI application that analyzes user-submitted text to detect signs of 
 ### 1. Clone the Repo
 
 ```bash
-git clone https://github.com/shashigurjar/suicide-risk-detector.git
-cd suicide-risk-detector
+git clone https://github.com/Lightinw/SuicideWatch.git
+cd SuicideWatch
 ```
 
 ### 2. Start the backend (Flask + model)
