@@ -1,0 +1,31 @@
+2025-06-05 23:15:37,821 - app - INFO - Loading model...
+2025-06-05 23:15:37,829 - app - CRITICAL - Resource loading failed: [Errno 2] Unable to synchronously open file (unable to open file: name = 'new.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+2025-06-05 23:15:37,876 - app - CRITICAL - Traceback (most recent call last):
+  File "D:\projects\suicide-risk-detector-main\backend\app.py", line 36, in load_resources
+    model = load_model('new.h5')
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\saving\saving_api.py", line 196, in load_model
+    return legacy_h5_format.load_model_from_hdf5(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\keras\src\legacy\saving\legacy_h5_format.py", line 116, in load_model_from_hdf5
+    f = h5py.File(filepath, mode="r")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\h5py\_hl\files.py", line 564, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, fcpl, swmr=swmr)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Asus\AppData\Local\Programs\Python\Python311\Lib\site-packages\h5py\_hl\files.py", line 238, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "h5py\\_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py\\_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py\\h5f.pyx", line 102, in h5py.h5f.open
+FileNotFoundError: [Errno 2] Unable to synchronously open file (unable to open file: name = 'new.h5', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)
+
+2025-06-05 23:47:10,348 - app - CRITICAL - Resource loading failed: name 'os' is not defined
+2025-06-05 23:47:10,354 - app - CRITICAL - Traceback (most recent call last):
+  File "D:\projects\suicide-risk-detector-main\backend\app.py", line 42, in load_resources
+    if not os.path.exists(MODEL_PATH):
+           ^^
+NameError: name 'os' is not defined
+
+2025-06-05 23:49:06,737 - app - INFO - Model downloaded from Hugging Face
